@@ -33,10 +33,7 @@ document.querySelector("a[href='#section1']").addEventListener("click", function
         document.getElementById('content-box').style.right = "-300px";
         document.getElementById('about-box').style.right = "-300px";
         document.getElementById('contact-box').style.right = "0";
-      });
-
-document.cookie = "yourCookieName=yourCookieValue; SameSite=None; Secure";  
-        
+      });        
   
     // Add event listeners to close the boxes when clicking outside or a close button
     // You'll need to implement this based on your design.
