@@ -1,4 +1,9 @@
-document.addEventListener("DOMContentLoaded", function () {
+  function closeBox(boxId) {
+    const box = document.getElementById(boxId);
+    box.style.right = "-300px";
+  }
+  
+  document.addEventListener("DOMContentLoaded", function () {
   const contentBox = document.getElementById("content-box");
   const aboutBox = document.getElementById("about-box");
   const contactBox = document.getElementById("contact-box");
@@ -31,11 +36,8 @@ document.querySelector("a[href='#section1']").addEventListener("click", function
         document.getElementById('about-box').style.right = "-300px";
         document.getElementById('contact-box').style.right = "0";
       });    
-          
-  function closeBox(boxId) {
-    const box = document.getElementById(boxId);
-    box.style.right = "-300px";
-  }
+
+
     // Add event listeners to close the boxes when clicking outside or a close button
     // You'll need to implement this based on your design.
   });
