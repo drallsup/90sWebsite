@@ -33,6 +33,9 @@ body {
   .header-tab {
     display: block;
   }
+  img {
+    max-width: 80%; /* Adjust the percentage as needed */
+  }
 }
 
 
@@ -51,22 +54,27 @@ body {
     display: block;
   }
 }
-a[target="_blank"] {
-  color: rgb(117, 231, 212);
-  /* Add additional styling as needed */
-}
-a {
-  text-decoration: none; /* Remove underlines for all links */
-  color: black; /* Set the default text color for links */
-}
-
-
 
 /* Media query for screens 1024 pixels wide and above (typically desktops) */
-/* @media (min-width: 1024px) {
-  /* Styles for desktops go here */
-/* } */
+@media (min-width: 1024px) {
+ 
+.vertical-nav {
+  display: none;
+}
 
+.header-tab {
+  display: block;
+}
+}
+
+    a[target="_blank"] {
+      color: rgb(117, 231, 212);
+      /* Add additional styling as needed */
+    }
+    a {
+      text-decoration: none; /* Remove underlines for all links */
+      color: black; /* Set the default text color for links */
+    }
 
     img {
       max-width: 100%;
@@ -137,12 +145,23 @@ a {
     background-color: #3498db; /* Medium blue */
   }
   
+  /* Add this to your existing styles or customize as needed */
+#about-box {
+  max-height: 100%; /* Set the maximum height based on your design */
+  overflow-y: auto;
+}
+
+#content-box {
+  max-height: 100%; /* Set the maximum height based on your design */
+  overflow-y: auto;
+}
+
   .vertical-nav {
     position: fixed;
     top: 0;
     right: 0;
     height: 100%;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: flex-end;
     background-color: #ffb347; /* Yellowish orange background */
@@ -193,13 +212,18 @@ a {
     font-size: 16px;
     margin-bottom: 20px;
   }
+
+  .sliding-box-content {
+    position: absolute;
+  }
   .close-button {
     position: absolute;
+    top: 10px;
     bottom: 10px;
-    left: 50%;
+    left: 10%;
     transform: translateX(-50%);
     cursor: pointer;
-    font-size: 50px;
+    font-size: 40px;
     color: #FF19CF;
   }
   

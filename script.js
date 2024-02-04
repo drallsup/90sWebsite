@@ -7,6 +7,9 @@
   const contentBox = document.getElementById("content-box");
   const aboutBox = document.getElementById("about-box");
   const contactBox = document.getElementById("contact-box");
+
+  // });
+
  
 
  function toggleVerticalNav() {
@@ -14,6 +17,10 @@
     verticalNav.style.display = (verticalNav.style.display === 'none' || verticalNav.style.display === '') ? 'block' : 'none';
        }
 
+       document.querySelector(".header-tab").addEventListener("click", function (e) {
+        e.preventDefault();
+        toggleVerticalNav();
+      });
   
    
 document.querySelector("a[href='#section1']").addEventListener("click", function (e) {
@@ -37,8 +44,6 @@ document.querySelector("a[href='#section1']").addEventListener("click", function
         document.getElementById('contact-box').style.right = "0";
       });    
 
-
-    // Add event listeners to close the boxes when clicking outside or a close button
-    // You'll need to implement this based on your design.
-  });
+    });
+   
   
